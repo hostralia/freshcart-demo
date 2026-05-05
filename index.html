@@ -36,8 +36,15 @@
   </main>
 
   <!-- TODO: Add to Cart logic goes here. Students will wire this up in Phase 3. -->
-  <script>
-    // The cart array and click handlers will be added by students.
-  </script>
+<script>
+  const cart = [];
+
+  document.querySelectorAll('.add-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const product = btn.dataset.product;
+      cart.push(product);
+    });
+  });
+</script>
 </body>
 </html>
